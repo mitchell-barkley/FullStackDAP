@@ -15,6 +15,9 @@ app.get('/about', (request, response) => {
     response.render('about.ejs');
 });
 
+const tasksRouter = require('./routes/tasks')
+app.use('/tasks', tasksRouter);
+
 const actorsRouter = require('./routes/actors')
 app.use('/actors', actorsRouter);
 
